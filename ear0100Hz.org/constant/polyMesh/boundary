@@ -1,0 +1,99 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+11
+(
+    UBASE
+    {
+        type            symmetry;
+        inGroups        1(symmetry);
+        nFaces          1565;
+        startFace       215876;
+    }
+    LBASE
+    {
+        type            symmetry;
+        inGroups        1(symmetry);
+        nFaces          1598;
+        startFace       217441;
+    }
+    SBASE
+    {
+        type            symmetry;
+        inGroups        1(symmetry);
+        nFaces          12;
+        startFace       219039;
+    }
+    UWALL0
+    {
+        type            symmetry;
+        inGroups        1(symmetry);
+        nFaces          1557;
+        startFace       219051;
+    }
+    UWALL1
+    {
+        type            symmetry;
+        inGroups        1(symmetry);
+        nFaces          155;
+        startFace       220608;
+    }
+    LWALL1
+    {
+        type            symmetry;
+        inGroups        1(symmetry);
+        nFaces          131;
+        startFace       220763;
+    }
+    LWALL0
+    {
+        type            symmetry;
+        inGroups        1(symmetry);
+        nFaces          1598;
+        startFace       220894;
+    }
+    AWALL
+    {
+        type            symmetry
+        inGroups        1(symmetry);
+        nFaces          2438;
+        startFace       222492;
+    }
+    PWALL
+    {
+        type            symmetry;
+        inGroups        1(symmetry);
+        nFaces          2408;
+        startFace       224930;
+    }
+    WINDOW0
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          134;
+        startFace       227338;
+    }
+    WINDOW1
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          138;
+        startFace       227472;
+    }
+)
+
+// ************************************************************************* //

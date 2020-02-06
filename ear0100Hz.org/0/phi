@@ -1,0 +1,99 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      phi;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    UBASE
+    {
+        //type            symmetryPlane;
+        type            symmetry;
+    }
+    LBASE
+    {
+        //type            symmetryPlane;
+        type            symmetry;
+    }
+    SBASE
+    {
+        //type            symmetryPlane;
+        type            symmetry;
+    }
+    UWALL0
+    {
+        //type            zeroGradient;
+        type            symmetry;
+        //type            zeroGradient;
+    }
+    UWALL1
+    {
+        type            symmetry;
+        //type            zeroGradient;
+    }
+    LWALL0
+    {
+        type            symmetry;
+        //type            zeroGradient;
+    }
+    LWALL1
+    {
+        type            symmetry;
+        //type            zeroGradient;
+    }
+    AWALL
+    {
+        type            symmetry;
+        //type            zeroGradient;
+    }
+    PWALL
+    {
+        type            symmetry;
+        //type            zeroGradient;
+    }
+
+    WINDOW0
+    {
+//        type            fixedValue;
+//        value           uniform 1;
+	type		uniformFixedValue;
+	uniformValue	sine;
+	uniformValueCoeffs
+	{
+		frequency	100;
+		amplitude	1.0;
+		scale		1.0;
+		level		0.0;
+		start		0.0;
+	}
+    }
+
+    WINDOW1
+    {
+        type            zeroGradient;
+//        type            fixedValue;
+//        value           uniform 0;
+    }
+
+    defaultFaces
+    {
+        type            empty;
+    }
+}
+
+// ************************************************************************* //
